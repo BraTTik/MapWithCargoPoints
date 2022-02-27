@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type BidState = {
   bids: Bid[];
+  selectedBid: Bid | null;
 };
 
 const initialState: BidState = {
@@ -28,6 +29,7 @@ const initialState: BidState = {
       endPoint: 41,
     },
   ],
+  selectedBid: null,
 };
 
 export const bidSlice = createSlice({
@@ -40,6 +42,14 @@ export const bidSlice = createSlice({
       if (foundIndex < 0) return state;
 
       state.bids[foundIndex] = { ...state.bids[foundIndex], ...points };
+    },
+
+    selectBid: (state, action: PayloadAction<Bid>) => {
+      state.selectedBid = action.payload;
+    },
+
+    resetBid: (state) => {
+      state.selectedBid = null;
     },
   },
 });

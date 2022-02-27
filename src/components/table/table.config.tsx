@@ -1,13 +1,15 @@
 import { ColumnsType } from "antd/lib/table";
 import { TablePointPicker } from "components/table/table.point-picker";
 import { Bid } from "types";
+import { BidCell } from "components/table/bid-cell";
 
 export const columns: ColumnsType<Bid> = [
   {
     title: "Заявка",
     dataIndex: "bid",
     key: "bid",
-    render: (text) => <>Заявка #{text}</>,
+    render: (text, record) => <BidCell record={record} />,
+    fixed: "left",
   },
   {
     title: "Погрузка",
