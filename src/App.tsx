@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout, Table, Map } from "components";
-import "leaflet/dist/leaflet.css";
 import "antd/dist/antd.css";
 import "./App.css";
 

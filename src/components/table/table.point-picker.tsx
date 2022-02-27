@@ -50,7 +50,7 @@ export const TablePointPicker = ({ bid, name }: { bid: number; name: "startPoint
     (value: ReactText) => {
       selectPoint({ bid, [name]: value });
     },
-    [bid, name],
+    [bid, name, selectPoint],
   );
   return <Select value={value} onChange={handleChange} options={options} />;
 };

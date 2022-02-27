@@ -13,4 +13,8 @@ export const useSelectedPoint = (bid: number, name: "startPoint" | "endPoint") =
   }
 };
 
-export const useSelectedBidSelector = () => useAppSelector((state) => state.bids.selectedBid);
+export const useSelectedBidSelector = () =>
+  useAppSelector((state) => {
+    const bid = state.bids.selectedBid;
+    return state.bids.bids.find((item) => item.bid === bid) ?? null;
+  });

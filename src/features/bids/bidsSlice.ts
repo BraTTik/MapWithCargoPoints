@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type BidState = {
   bids: Bid[];
-  selectedBid: Bid | null;
+  selectedBid: number | null;
 };
 
 const initialState: BidState = {
@@ -44,7 +44,7 @@ export const bidSlice = createSlice({
       state.bids[foundIndex] = { ...state.bids[foundIndex], ...points };
     },
 
-    selectBid: (state, action: PayloadAction<Bid>) => {
+    selectBid: (state, action: PayloadAction<number>) => {
       state.selectedBid = action.payload;
     },
 

@@ -2,12 +2,12 @@ import { createContext, FC, RefObject, useContext, useEffect, useRef, useState }
 import L, { Map } from "leaflet";
 import { APP_ENV } from "app-env";
 
-type MapContext = {
+type MapContextType = {
   map?: Map;
   mapContainer: RefObject<HTMLDivElement>;
 };
 
-const MapContext = createContext({} as MapContext);
+const MapContext = createContext({} as MapContextType);
 
 export const MapProvider: FC = ({ children }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
