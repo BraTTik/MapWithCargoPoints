@@ -1,0 +1,24 @@
+.layout {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+
+  &-element {
+    flex: 1 1;
+    position: relative;
+
+    &__right {
+      background-color: whitesmoke;
+    }
+
+    &__resizer {
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor: ew-resize;
+    }
+  }
+}
