@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const Map = () => {
   const { mapContainer } = useMap();
-  const [height, setHeight] = useState<number>(400);
+  const [height, setHeight] = useState<number | string>("100%");
 
   useEffect(() => {
     if (mapContainer.current) {

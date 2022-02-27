@@ -21,6 +21,7 @@ export const Layout: FC = ({ children }) => {
   const handleResize = (event: globalThis.PointerEvent) => {
     preventDefault(event);
     setWidth(event.x);
+    window.dispatchEvent(new Event("resize"));
   };
 
   const stopResize = (event: globalThis.PointerEvent) => {

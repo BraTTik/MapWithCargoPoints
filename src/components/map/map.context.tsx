@@ -16,8 +16,8 @@ export const MapProvider: FC = ({ children }) => {
   useEffect(() => {
     if (mapContainer.current) {
       const currentMap = L.map(mapContainer.current, {
-        center: [43.64701, -79.39425],
-        zoom: 15,
+        center: [55.751244, 37.618423],
+        zoom: 12,
       });
 
       L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
